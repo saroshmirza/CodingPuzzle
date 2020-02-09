@@ -19,6 +19,7 @@
 		7E09CBE323F0263E00A6914D /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09CBE223F0263E00A6914D /* Root.swift */; };
 		7E09CBE523F0781D00A6914D /* EarthquakeMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09CBE423F0781D00A6914D /* EarthquakeMapController.swift */; };
 		7E09CBED23F0A27000A6914D /* EarthQuakeLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09CBEC23F0A27000A6914D /* EarthQuakeLookupTests.swift */; };
+		7E09CBF523F0CF9F00A6914D /* GeonamesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09CBF423F0CF9F00A6914D /* GeonamesAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7E09CBEA23F0A27000A6914D /* EarthQuakeLookupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthQuakeLookupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09CBEC23F0A27000A6914D /* EarthQuakeLookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthQuakeLookupTests.swift; sourceTree = "<group>"; };
 		7E09CBEE23F0A27000A6914D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E09CBF423F0CF9F00A6914D /* GeonamesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeonamesAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,7 @@
 				7E09CBD823EF70FD00A6914D /* Model */,
 				7E09CBD723EF70F800A6914D /* View */,
 				7E09CBD523EF704400A6914D /* Controller */,
-				7E09CBD923EF710800A6914D /* Service */,
+				7E09CBD923EF710800A6914D /* Networking */,
 				7E09CBC123EF6C8100A6914D /* AppDelegate.swift */,
 				7E09CBC523EF6C8100A6914D /* Main.storyboard */,
 				7E09CBC823EF6C8200A6914D /* Assets.xcassets */,
@@ -137,12 +139,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7E09CBD923EF710800A6914D /* Service */ = {
+		7E09CBD923EF710800A6914D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				7E09CBE023EF74AE00A6914D /* Service.swift */,
+				7E09CBF423F0CF9F00A6914D /* GeonamesAPI.swift */,
 			);
-			path = Service;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		7E09CBEB23F0A27000A6914D /* EarthQuakeLookupTests */ = {
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E09CBDD23EF73C600A6914D /* Earthquake.swift in Sources */,
+				7E09CBF523F0CF9F00A6914D /* GeonamesAPI.swift in Sources */,
 				7E09CBE323F0263E00A6914D /* Root.swift in Sources */,
 				7E09CBE123EF74AE00A6914D /* Service.swift in Sources */,
 				7E09CBD423EF703700A6914D /* EarthquakeListController.swift in Sources */,

@@ -11,8 +11,12 @@ import Foundation
 class Service: NSObject {
     static let shared = Service()
     
+    
+    
     func fetchEarthquakes(completion: @escaping ([Earthquake]?, Error?) -> ()) {
-        let urlString = "http://api.geonames.org/earthquakesJSON?formatted=true&north=44.1&south=-9.9&east=-22.4&west=55.2&username=mkoppelman"
+        let geoApi = GeonamesAPI.init()        
+        let urlString = geoApi.baseURL+geoApi.interest+geoApi.docType+"north="+geoApi.north+"&south="+geoApi.south+"&east="+geoApi.east+"&west="+geoApi.west+"&username="+geoApi.username
+        print(urlString)
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
             if let err = err {
