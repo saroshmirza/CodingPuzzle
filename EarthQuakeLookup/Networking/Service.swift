@@ -8,11 +8,7 @@
 
 import Foundation
 
-class Service: NSObject {
-    static let shared = Service()
-    
-    
-    
+class Service: NSObject {    
     func fetchEarthquakes(completion: @escaping ([Earthquake]?, Error?) -> ()) {
         let geoApi = GeonamesAPI.init()        
         let urlString = geoApi.baseURL+geoApi.interest+geoApi.docType+"north="+geoApi.north+"&south="+geoApi.south+"&east="+geoApi.east+"&west="+geoApi.west+"&username="+geoApi.username

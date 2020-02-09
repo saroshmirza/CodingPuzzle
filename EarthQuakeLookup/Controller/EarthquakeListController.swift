@@ -10,6 +10,7 @@ import UIKit
 
 class EarthquakeListController: UITableViewController {
     
+    private let service = Service()
     var earthquakeViewModels = [EarthquakeViewModel]()
     let cellId = "cellId"
     var indexSelected = 0
@@ -23,7 +24,7 @@ class EarthquakeListController: UITableViewController {
     }
     
     fileprivate func fetchData() {
-        Service.shared.fetchEarthquakes { (earthquakes, err) in
+        service.fetchEarthquakes { (earthquakes, err) in
             if let err = err {
                 print("Failed to fetch data:", err)
                 return
