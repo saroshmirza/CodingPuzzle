@@ -28,7 +28,7 @@ class EarthquakeMapController: UIViewController {
     
     fileprivate func setupAnnotation() {
         let annotation = MKPointAnnotation()
-        annotation.title = viewModel.name
+        annotation.title = viewModel.date
         annotation.subtitle = viewModel.detailTextString
         let coordinate = CLLocationCoordinate2D(latitude: viewModel.latitude, longitude: viewModel.longitude)
         annotation.coordinate = coordinate

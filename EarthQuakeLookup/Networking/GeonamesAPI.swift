@@ -37,4 +37,9 @@ class GeonamesAPI {
     var west: String{
         return "55.2"
     }
+    
+    func getUrl() -> String{
+        let urlString = baseURL+interest+docType+"north="+north+"&south="+south+"&east="+east+"&west="+west+"&username="+username
+        return urlString
+    }
 }

@@ -12,7 +12,7 @@ class EarthquakeCell:UITableViewCell {
     
     var earthquakeViewModel: EarthquakeViewModel! {
         didSet {
-            textLabel?.text = earthquakeViewModel.name
+            textLabel?.text = earthquakeViewModel.date
             detailTextLabel?.text = earthquakeViewModel.detailTextString
             accessoryType = earthquakeViewModel.accessoryType            
         }

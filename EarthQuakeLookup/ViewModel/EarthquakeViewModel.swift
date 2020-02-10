@@ -11,7 +11,7 @@ import UIKit
 
 struct EarthquakeViewModel {
     
-    let name: String
+    let date: String
     
     let latitude: Double
     let longitude: Double
@@ -20,8 +20,14 @@ struct EarthquakeViewModel {
     let accessoryType: UITableViewCell.AccessoryType
     
     init(earthquake: Earthquake) {
-        self.name = earthquake.eqid
         
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd, yyyy"
+        let date: Date? = dateFormatterGet.date(from: earthquake.datetime)
+
+        self.date = dateFormatterPrint.string(from: date!)
         self.latitude = earthquake.lat
         self.longitude = earthquake.lng
         
@@ -30,7 +36,8 @@ struct EarthquakeViewModel {
             accessoryType = .detailDisclosureButton
         } else {
             accessoryType = .none
-        }        
-    }
+        }
+        
+    }    
     
 }
